@@ -1,0 +1,40 @@
+{
+    "name": "rindow/rindow-transaction",
+    "type": "library",
+    "description": "Support transaction management",
+    "keywords": ["rindow","framework","transaction"],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.3",
+        "interop-phpobjects/lenient-transaction": "*",
+        "rindow/rindow-stdlib": "*"
+    },
+    "require-dev": {
+        "interop-phpobjects/lenient-transaction": "*",
+        "rindow/rindow-stdlib": "*",
+        "rindow/rindow-annotation": "*",
+        "rindow/rindow-aop": "*"
+    },
+    "suggest": {
+        "rindow/rindow-aop": "When using on AOP",
+        "rindow/rindow-annotation": "When using annotation"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rindow\\Transaction\\": "src/"
+        }
+    },
+
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://rindow.github.io/rindow-packagist/packages.json",
+            "options": {
+                "ssl": {
+                    "verify_peer": "true"
+                }
+            }
+        }
+    ],
+    "minimum-stability": "dev"
+}
