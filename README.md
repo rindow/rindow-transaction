@@ -1,5 +1,5 @@
-AOP manager
-===========
+Transaction manager
+===================
 Master: [![Build Status](https://travis-ci.com/rindow/rindow-transaction.png?branch=master)](https://travis-ci.com/rindow/rindow-transaction)
 
 This module integrates and manages transaction processing of resources
