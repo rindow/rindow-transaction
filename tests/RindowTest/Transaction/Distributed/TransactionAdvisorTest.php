@@ -11,7 +11,7 @@ use Rindow\Transaction\Distributed\Xid;
 use Rindow\Transaction\Distributed\Transaction;
 use Rindow\Transaction\Distributed\TransactionManager;
 use Rindow\Transaction\Exception;
-use Monolog\Logger;
+//use Monolog\Logger;
 
 class TestXAResource implements XAResource
 {

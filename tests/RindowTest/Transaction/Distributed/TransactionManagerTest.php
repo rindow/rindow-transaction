@@ -11,7 +11,7 @@ use Rindow\Transaction\Distributed\Xid;
 use Rindow\Transaction\Distributed\Transaction;
 use Rindow\Transaction\Distributed\TransactionManager;
 use Rindow\Transaction\Exception;
-use Monolog\Logger;
+//use Monolog\Logger;
 
 class TestXAResource implements XAResource
 {
@@ -74,7 +74,7 @@ class Test extends TestCase
     {
         $xares = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $xares2 = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
-        $logger = new Logger('test');
+        $logger = new TestLogger('test');
 
         $xares->expects($this->once())
                 ->method('prepare')
@@ -104,7 +104,7 @@ class Test extends TestCase
     {
         $xares = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $xares2 = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
-        $logger = new Logger('test');
+        $logger = new TestLogger('test');
 
         $xares->expects($this->once())
                 ->method('rollback');
@@ -128,7 +128,7 @@ class Test extends TestCase
     {
         $xares = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $xares2 = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
-        $logger = new Logger('test');
+        $logger = new TestLogger('test');
 
         $xares->expects($this->once())
                 ->method('prepare')
@@ -163,7 +163,7 @@ class Test extends TestCase
         $xares = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $xares2 = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $logger = $this->createTestMock(__NAMESPACE__.'\TestLogger');
-        //$logger = new Logger('test');
+        //$logger = new TestLogger('test');
 
         $xares->expects($this->at(0))
                 ->method('rollback');
@@ -197,7 +197,7 @@ class Test extends TestCase
         $xares = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $xares2 = $this->createTestMock(__NAMESPACE__.'\TestXAResource');
         $logger = $this->createTestMock(__NAMESPACE__.'\TestLogger');
-        //$logger = new Logger('test');
+        //$logger = new TestLogger('test');
 
         $xares->expects($this->at(0))
                 ->method('start')
