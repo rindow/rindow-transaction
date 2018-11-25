@@ -1,8 +1,8 @@
 <?php
 namespace Rindow\Transaction\Xa;
 
-use Interop\Lenient\Transaction\Xa\XaException as XaExceptionInterface;
+use Interop\Lenient\Transaction\Xa\XAException as XAExceptionInterface;
 
-class XaException extends \RuntimeException implements XaExceptionInterface
+class XAException extends \RuntimeException implements XAExceptionInterface
 {
 }
