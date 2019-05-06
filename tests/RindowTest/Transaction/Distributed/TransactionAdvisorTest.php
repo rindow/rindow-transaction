@@ -239,9 +239,6 @@ class Test extends TestCase
 {
     public function setUp()
     {
-        usleep( RINDOW_TEST_CLEAR_CACHE_INTERVAL );
-        \Rindow\Stdlib\Cache\CacheFactory::clearCache();
-        usleep( RINDOW_TEST_CLEAR_CACHE_INTERVAL );
     }
 
     public function getConfig()
@@ -258,6 +255,7 @@ class Test extends TestCase
                     'Rindow\Transaction\Distributed\Module' => true,
                     //'Rindow\Module\Monolog\Module' => true,
                 ),
+                'enableCache' => false,
             ),
             'aop' => array(
                 'plugins' => array(
