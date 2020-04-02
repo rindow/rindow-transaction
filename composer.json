@@ -7,13 +7,13 @@
     "require": {
         "php": ">=5.3.3",
         "interop-phpobjects/lenient-transaction": "*",
-        "rindow/rindow-stdlib": "*"
+        "rindow/rindow-stdlib": "1.*"
     },
     "require-dev": {
         "interop-phpobjects/lenient-transaction": "*",
-        "rindow/rindow-stdlib": "*",
-        "rindow/rindow-annotation": "*",
-        "rindow/rindow-aop": "*"
+        "rindow/rindow-stdlib": "1.*",
+        "rindow/rindow-annotation": "1.*",
+        "rindow/rindow-aop": "1.*"
     },
     "suggest": {
         "rindow/rindow-aop": "When using on AOP",
@@ -23,18 +23,5 @@
         "psr-0": {
             "Rindow\\Transaction\\": "src/"
         }
-    },
-
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://rindow.github.io/rindow-packagist/packages.json",
-            "options": {
-                "ssl": {
-                    "verify_peer": "true"
-                }
-            }
-        }
-    ],
-    "minimum-stability": "dev"
+    }
 }
